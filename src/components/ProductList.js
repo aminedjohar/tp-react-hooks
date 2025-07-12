@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { ThemeContext } from '../App';
 import useProductSearch from '../hooks/useProductSearch';
 
-const ProductList = () => {
+const ProductList = ({ searchTerm }) => {
   const { isDarkTheme } = useContext(ThemeContext);
   // TODO: Exercice 2.1 - Utiliser le LanguageContext pour les traductions
   
@@ -27,12 +27,17 @@ const ProductList = () => {
       Erreur: {error}
     </div>
   );
+
+  // Filter products by searchTerm (case-insensitive, on title)
+  const filteredProducts = products.filter(product =>
+    product.title.toLowerCase().includes((searchTerm || '').toLowerCase())
+  );
   
   return (
     <div>
       {/* TODO: Exercice 4.1 - Ajouter le bouton de rechargement */}
       <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-        {products.map(product => (
+        {filteredProducts.map(product => (
           <div key={product.id} className="col">
             <div className={`card h-100 ${isDarkTheme ? 'bg-dark text-light' : ''}`}>
               {product.thumbnail && (

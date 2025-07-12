@@ -53,8 +53,15 @@ Pour chaque exercice :
 
 _Votre réponse pour l'exercice 1 :_
 ```
-Expliquez votre solution ici
-[Ajoutez vos captures d'écran]
+Pour la recherche, j’ai utilisé un state `searchTerm` dans ProductSearch, passé au composant ProductList pour filtrer les produits en temps réel.  
+Pour éviter de filtrer à chaque frappe, j’ai créé un hook personnalisé `useDebounce` qui retarde la mise à jour du terme de recherche de 300ms.  
+Ainsi, la liste ne se met à jour que lorsque l’utilisateur a fini de taper.
+
+Difficulté : comprendre où placer le filtrage (dans ProductList ou ProductSearch).  
+Solution : j’ai choisi de filtrer dans ProductList pour garder ProductSearch simple.
+
+[Recherche en temps réel](public/screenshots/recherche-fonctionne.png)
+
 ```
 
 ### Exercice 2 : Context et Internationalisation
