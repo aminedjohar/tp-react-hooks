@@ -2,7 +2,7 @@ import React, { useState, useContext, useEffect } from 'react';
 import { ThemeContext } from '../App';
 import useDebounce from '../hooks/useDebounce';
 
-const ProductSearch = ({ setDebouncedTerm }) => {
+const ProductSearch = ({ setDebouncedTerm, placeholder }) => {
   const [searchTerm, setSearchTerm] = useState('');
   const { isDarkTheme } = useContext(ThemeContext);
   const debouncedSearchTerm = useDebounce(searchTerm, 300);
@@ -17,7 +17,7 @@ const ProductSearch = ({ setDebouncedTerm }) => {
         type="text"
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
-        placeholder="Rechercher un produit..."
+        placeholder={placeholder}
         className={`form-control ${isDarkTheme ? 'bg-dark text-light' : ''}`}
       />
     </div>

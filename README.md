@@ -47,9 +47,9 @@ Pour chaque exercice :
 ### Exercice 1 : État et Effets 
 #### Objectif : Implémenter une recherche en temps réel
 
-- [ ] 1.1 Modifier le composant ProductSearch pour utiliser la recherche
-- [ ] 1.2 Implémenter le debounce sur la recherche
-- [ ] 1.3 Documenter votre solution ici
+- [x] 1.1 Modifier le composant ProductSearch pour utiliser la recherche
+- [x] 1.2 Implémenter le debounce sur la recherche
+- [x] 1.3 Documenter votre solution ici
 
 _Votre réponse pour l'exercice 1 :_
 ```
@@ -67,14 +67,21 @@ Solution : j’ai choisi de filtrer dans ProductList pour garder ProductSearch
 ### Exercice 2 : Context et Internationalisation
 #### Objectif : Gérer les préférences de langue
 
-- [ ] 2.1 Créer le LanguageContext
-- [ ] 2.2 Ajouter le sélecteur de langue
-- [ ] 2.3 Documenter votre solution ici
+- [x] 2.1 Créer le LanguageContext
+- [x] 2.2 Ajouter le sélecteur de langue
+- [x] 2.3 Documenter votre solution ici
 
 _Votre réponse pour l'exercice 2 :_
 ```
-Expliquez votre solution ici
-[Ajoutez vos captures d'écran]
+Pour la gestion de la langue, j’ai créé un `LanguageContext` qui stocke la langue courante et une fonction pour la changer.  
+J’ai ajouté un sélecteur de langue dans le header, qui permet de passer du français à l’anglais.  
+Tous les textes statiques de l’application (titre, placeholder de recherche, label prix, messages de chargement et d’erreur) sont traduits dynamiquement selon la langue choisie grâce à un objet `translations` centralisé dans `App.js`.
+
+Difficulté : comprendre comment propager la langue et les traductions dans tous les composants.  
+Solution : j’ai utilisé le context pour la langue et j’ai passé les traductions en props aux composants qui en ont besoin.
+
+![Sélecteur de langue](public/screenshots/fr.png)
+![Traduction en anglais](public/screenshots/en.png)
 ```
 
 ### Exercice 3 : Hooks Personnalisés
