@@ -93,8 +93,14 @@ Solution : j’ai utilisé le context pour la langue et j’ai passé les trad
 
 _Votre réponse pour l'exercice 3 :_
 ```
-Expliquez votre solution ici
-[Ajoutez vos captures d'écran]
+Pour cet exercice, j’ai créé deux hooks personnalisés :
+
+- `useDebounce` : permet de retarder la mise à jour d’une valeur (déjà utilisé pour la recherche).
+- `useLocalStorage` : permet de stocker et de synchroniser une valeur avec le localStorage du navigateur. Cela permet de conserver la langue ou le thème même après un rechargement de la page.
+
+Difficulté : bien gérer la synchronisation initiale avec le localStorage et éviter les erreurs de parsing.
+Solution : j’ai utilisé un try/catch et la fonction d’initialisation de useState.
+
 ```
 
 ### Exercice 4 : Gestion Asynchrone et Pagination
