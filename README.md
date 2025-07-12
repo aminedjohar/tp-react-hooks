@@ -87,9 +87,9 @@ Solution : j’ai utilisé le context pour la langue et j’ai passé les trad
 ### Exercice 3 : Hooks Personnalisés
 #### Objectif : Créer des hooks réutilisables
 
-- [ ] 3.1 Créer le hook useDebounce
-- [ ] 3.2 Créer le hook useLocalStorage
-- [ ] 3.3 Documenter votre solution ici
+- [x] 3.1 Créer le hook useDebounce
+- [x] 3.2 Créer le hook useLocalStorage
+- [x] 3.3 Documenter votre solution ici
 
 _Votre réponse pour l'exercice 3 :_
 ```
@@ -106,14 +106,21 @@ Solution : j’ai utilisé un try/catch et la fonction d’initialisation de use
 ### Exercice 4 : Gestion Asynchrone et Pagination
 #### Objectif : Gérer le chargement et la pagination
 
-- [ ] 4.1 Ajouter le bouton de rechargement
-- [ ] 4.2 Implémenter la pagination
-- [ ] 4.3 Documenter votre solution ici
+- [x] 4.1 Ajouter le bouton de rechargement
+- [x] 4.2 Implémenter la pagination
+- [x] 4.3 Documenter votre solution ici
 
 _Votre réponse pour l'exercice 4 :_
 ```
-Expliquez votre solution ici
-[Ajoutez vos captures d'écran]
+Pour la gestion asynchrone, j’ai ajouté un bouton de rechargement qui permet de refetcher les produits depuis l’API.  
+Pour la pagination, j’ai limité l’affichage à 6 produits par page et ajouté des boutons “Précédent/Suivant” pour naviguer entre les pages.  
+Le numéro de page et le total sont affichés, et tous les labels sont traduits selon la langue choisie.
+
+Difficulté : bien synchroniser la pagination avec l’API et gérer le rechargement sans perdre l’état courant.
+Solution : j’ai utilisé un state pour la page courante, un flag pour le rechargement, et passé toutes les fonctions nécessaires via le hook personnalisé.
+
+![Pagination](public/screenshots/pagination.png)
+![Bouton de rechargement](public/screenshots/reload.png)
 ```
 
 ## Rendu

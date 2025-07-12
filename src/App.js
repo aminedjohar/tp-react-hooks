@@ -13,14 +13,24 @@ const translations = {
     searchPlaceholder: "Rechercher un produit...",
     price: "Prix",
     loading: "Chargement...",
-    error: "Erreur"
+    error: "Erreur",
+    reload: "Recharger",
+    previous: "Précédent",
+    next: "Suivant",
+    page: "Page",
+    of: "sur"
   },
   en: {
     title: "Product Catalog",
     searchPlaceholder: "Search for a product...",
     price: "Price",
     loading: "Loading...",
-    error: "Error"
+    error: "Error",
+    reload: "Reload",
+    previous: "Previous",
+    next: "Next",
+    page: "Page",
+    of: "of"
   }
 };
 
